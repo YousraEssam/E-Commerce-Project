@@ -2,18 +2,31 @@
 
   <label>
     Name:
+    <br>
+    <label class="sub-label">
+        Name is required
+    </label>
+    <br>
     <input id="name" name="name" type="text" formControlName="name" 
       class="form-control" required  minlength="4">
   </label>
-
+<br>
   <label>
     Email:
+    <br>
+    <label class="sub-label">
+        Email is required
+    </label>
+    <br>
     <input id="email" name="email" type="email" formControlName="email" 
       class="form-control" required>
   </label>
-
+<br>
   <label>
     Password:
+    <label class="sub-label">
+        Password must be between 8 and 16 characters
+    </label>
     <input id="password" name="password" type="password" formControlName="password" 
       class="form-control" required minlength="8" maxlength="16">
   </label>

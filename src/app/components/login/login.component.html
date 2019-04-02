@@ -2,33 +2,27 @@
 
   <label>
     Email:
+    <br>
+    <label class="sub-label">
+        Email is required
+    </label>
+    <br>
     <input id="email" name="email" type="email" formControlName="email" 
       class="form-control" required>
   </label>
-
-  <!-- <div *ngIf="email.invalid" class="alert alert-danger">
-    <div *ngIf="email.errors.required">
-      Email is required.
-    </div>
-  </div> -->
+<br>
 
   <label>
     Password:
+    <br>
+    <label class="sub-label">
+        Password must be between 8 and 16 characters
+    </label>
+    <br>
     <input id="password" name="password" type="password" formControlName="password" 
         class="form-control" required minlength="8" maxlength="16">
   </label>
-
-  <!-- <div *ngIf="password.invalid" class="alert alert-danger">
-    <div *ngIf="password.errors.required">
-      Password is required.
-    </div>
-    <div *ngIf="password.errors.minlength">
-      Password must be at least 8 characters long.
-    </div>
-    <div *ngIf="password.errors.maxlength">
-      Password must be at most 16 characters long.
-    </div>
-  </div> -->
+<br>
 
   <p>
     <button type="button" [disabled]="loginForm.invalid"
