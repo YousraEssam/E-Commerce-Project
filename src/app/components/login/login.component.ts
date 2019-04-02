@@ -19,18 +19,13 @@ export class LoginComponent implements OnInit {
       Validators.maxLength(16),
     ]),
   });
-
-  onSubmit() {
-    console.warn(this.loginForm.value);
-  }
-
   
   constructor(private router: Router) { }
   
   public navigateTo(path: string): void {
     this.router.navigate([path]);
   }
-  
+
   ngOnInit() {
   }
 
