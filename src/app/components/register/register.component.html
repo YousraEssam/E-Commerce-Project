@@ -24,13 +24,15 @@
 <br>
   <label>
     Password:
+    <br>
     <label class="sub-label">
         Password must be between 8 and 16 characters
     </label>
+    <br>
     <input id="password" name="password" type="password" formControlName="password" 
       class="form-control" required minlength="8" maxlength="16">
   </label>
-
+<br>
   <p>
     <button type="button" [disabled]="registerForm.invalid" (click)="navigateTo('')">Submit</button>
   </p>
