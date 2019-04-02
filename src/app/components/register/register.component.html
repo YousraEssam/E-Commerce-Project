@@ -1,3 +1,25 @@
-<p>
-  register works!
-</p>
+<form [formGroup]="registerForm">
+
+  <label>
+    Name:
+    <input id="name" name="name" type="text" formControlName="name" 
+      class="form-control" required  minlength="4">
+  </label>
+
+  <label>
+    Email:
+    <input id="email" name="email" type="email" formControlName="email" 
+      class="form-control" required>
+  </label>
+
+  <label>
+    Password:
+    <input id="password" name="password" type="password" formControlName="password" 
+      class="form-control" required minlength="8" maxlength="16">
+  </label>
+
+  <p>
+    <button type="button" [disabled]="registerForm.invalid" (click)="navigateTo('')">Submit</button>
+  </p>
+
+</form>
