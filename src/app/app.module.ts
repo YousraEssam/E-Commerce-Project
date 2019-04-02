@@ -16,7 +16,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent,s
+    HomeComponent,
     CartCounterComponent,
     WishListComponent,
     SingleProductComponent,
