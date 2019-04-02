@@ -9,20 +9,18 @@ import { HomeComponent } from './components/home/home.component';
 import { CartCounterComponent } from './components/cart-counter/cart-counter.component';
 import { WishListComponent } from './components/wish-list/wish-list.component';
 import { SingleProductComponent } from './components/single-product/single-product.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent,
+    HomeComponent,s
     CartCounterComponent,
     WishListComponent,
     SingleProductComponent,
-    HeaderComponent,
-    FooterComponent
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
