@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -23,8 +24,13 @@ export class LoginComponent implements OnInit {
     console.warn(this.loginForm.value);
   }
 
-  constructor() { }
-
+  
+  constructor(private router: Router) { }
+  
+  public navigateTo(path: string): void {
+    this.router.navigate([path]);
+  }
+  
   ngOnInit() {
   }
 
