@@ -10,6 +10,7 @@ import { CartCounterComponent } from './components/cart-counter/cart-counter.com
 import { WishListComponent } from './components/wish-list/wish-list.component';
 import { SingleProductComponent } from './components/single-product/single-product.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
