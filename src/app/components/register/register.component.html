@@ -1,6 +1,8 @@
+<p class="form"> Register Form </p>
+<div class="register">
 <form [formGroup]="registerForm">
 
-  <label>
+  <label class="name">
     Name:
     <br>
     <label class="sub-label">
@@ -11,7 +13,7 @@
       class="form-control" required  minlength="4">
   </label>
 <br>
-  <label>
+  <label class="email">
     Email:
     <br>
     <label class="sub-label">
@@ -22,7 +24,7 @@
       class="form-control" required>
   </label>
 <br>
-  <label>
+  <label class="password">
     Password:
     <br>
     <label class="sub-label">
@@ -34,7 +36,8 @@
   </label>
 <br>
   <p>
-    <button type="button" [disabled]="registerForm.invalid" (click)="navigateTo('')">Submit</button>
+    <button class="btn btn-primary" type="button" [disabled]="registerForm.invalid" (click)="navigateTo('')">Submit</button>
   </p>
 
 </form>
+</div>
