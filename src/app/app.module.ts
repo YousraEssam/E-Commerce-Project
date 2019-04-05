@@ -15,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LogoutComponent } from './components/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     SingleProductComponent,
     NotFoundComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
