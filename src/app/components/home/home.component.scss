@@ -37,9 +37,10 @@ h2::after {
 	padding: 0 70px;
 }
 .carousel .item {
-	min-height: 330px;
+	// min-height: 330px;
     text-align: center;
 	overflow: hidden;
+	height: 100vh;
 }
 .carousel .item .img-box {
 	height: 160px;
@@ -149,7 +150,4 @@ h2::after {
 .star-rating i {
 	font-size: 14px;
 	color: #ffc000;
-}
-.thumb-wrapper,.img-box, .col-sm-3{
-	display: block;
 }

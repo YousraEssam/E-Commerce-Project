@@ -1,8 +1,3 @@
-<!-- <p class="wel">
-  Welcome to Our site
-</p> -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,14 +23,15 @@
           <div class="carousel-inner">
             <div class="item carousel-item active">
               <div class="row">
-                <div class="col-sm-3">
-                  <div class="thumb-wrapper" *ngFor="let product of products">
+                <div class="col-sm-3" *ngFor="let product of products">
+                  <div class="thumb-wrapper">
                     <div class="img-box">
                       <img src="{{ product.img }}" class="img-responsive img-fluid" alt="">
                     </div>
                     <div class="thumb-content">
                       <h4>{{ product.name }}</h4>
-                      <p class="item-price"><s>{{ product.priceBeforeSale }}</s> <span>{{ product.priceAfterSale }}</span></p>
+                      <p class="item-price"><s>{{ product.priceBeforeSale }}</s>
+                        <span>{{ product.priceAfterSale }}</span></p>
                       <div class="star-rating">
                         <ul class="list-inline">
                           <li class="list-inline-item"><i class="fa fa-star"></i></li>
@@ -50,81 +46,20 @@
                     </div>
                   </div>
                 </div>
-                <!-- <div class="col-sm-3">
-                  <div class="thumb-wrapper">
-                    <div class="img-box">
-                      <img src="https://image.ibb.co/g0CAPp/ipad.jpg" class="img-responsive img-fluid" alt="">
-                    </div>
-                    <div class="thumb-content">
-                      <h4>Sony Headphone</h4>
-                      <p class="item-price"><s>$25.00</s> <span>$23.99</span></p>
-                      <div class="star-rating">
-                        <ul class="list-inline">
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                        </ul>
-                      </div>
-                      <a href="#" class="btn btn-primary">Add to Cart</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="thumb-wrapper">
-                    <div class="img-box">
-                      <img src="https://image.ibb.co/g0CAPp/ipad.jpg" class="img-responsive img-fluid" alt="">
-                    </div>
-                    <div class="thumb-content">
-                      <h4>Macbook Air</h4>
-                      <p class="item-price"><s>$899.00</s> <span>$649.00</span></p>
-                      <div class="star-rating">
-                        <ul class="list-inline">
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
-                        </ul>
-                      </div>
-                      <a href="#" class="btn btn-primary">Add to Cart</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="thumb-wrapper">
-                    <div class="img-box">
-                      <img src="https://image.ibb.co/g0CAPp/ipad.jpg" class="img-responsive img-fluid" alt="">
-                    </div>
-                    <div class="thumb-content">
-                      <h4>Nikon DSLR</h4>
-                      <p class="item-price"><s>$315.00</s> <span>$250.00</span></p>
-                      <div class="star-rating">
-                        <ul class="list-inline">
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                        </ul>
-                      </div>
-                      <a href="#" class="btn btn-primary">Add to Cart</a>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
+
             <div class="item carousel-item">
               <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-3" *ngFor="let product of products">
                   <div class="thumb-wrapper">
                     <div class="img-box">
-                      <img src="https://image.ibb.co/g0CAPp/ipad.jpg" class="img-responsive img-fluid" alt="">
+                      <img src="{{ product.img }}" class="img-responsive img-fluid" alt="">
                     </div>
                     <div class="thumb-content">
-                      <h4>Sony Play Station</h4>
-                      <p class="item-price"><s>$289.00</s> <span>$269.00</span></p>
+                      <h4>{{ product.name }}</h4>
+                      <p class="item-price"><s>{{ product.priceBeforeSale }}</s>
+                        <span>{{ product.priceAfterSale }}</span></p>
                       <div class="star-rating">
                         <ul class="list-inline">
                           <li class="list-inline-item"><i class="fa fa-star"></i></li>
@@ -134,85 +69,25 @@
                           <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
                         </ul>
                       </div>
-                      <a href="#" class="btn btn-primary">Add to Cart</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="thumb-wrapper">
-                    <div class="img-box">
-                      <img src="https://image.ibb.co/g0CAPp/ipad.jpg" class="img-responsive img-fluid" alt="">
-                    </div>
-                    <div class="thumb-content">
-                      <h4>Macbook Pro</h4>
-                      <p class="item-price"><s>$1099.00</s> <span>$869.00</span></p>
-                      <div class="star-rating">
-                        <ul class="list-inline">
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
-                        </ul>
-                      </div>
-                      <a href="#" class="btn btn-primary">Add to Cart</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="thumb-wrapper">
-                    <div class="img-box">
-                      <img src="https://image.ibb.co/g0CAPp/ipad.jpg" class="img-responsive img-fluid" alt="">
-                    </div>
-                    <div class="thumb-content">
-                      <h4>Bose Speaker</h4>
-                      <p class="item-price"><s>$109.00</s> <span>$99.00</span></p>
-                      <div class="star-rating">
-                        <ul class="list-inline">
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                        </ul>
-                      </div>
-                      <a href="#" class="btn btn-primary">Add to Cart</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="thumb-wrapper">
-                    <div class="img-box">
-                      <img src="https://image.ibb.co/g0CAPp/ipad.jpg" class="img-responsive img-fluid" alt="">
-                    </div>
-                    <div class="thumb-content">
-                      <h4>Samsung Galaxy S8</h4>
-                      <p class="item-price"><s>$599.00</s> <span>$569.00</span></p>
-                      <div class="star-rating">
-                        <ul class="list-inline">
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                        </ul>
-                      </div>
-                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                      <a href="http://localhost:4200/wish" class="btn btn-primary fa fa-heart"> Add to Wish List</a>
+                      <a href="http://localhost:4200/cart" class="btn btn-primary fa fa-cart-plus"> Add to Cart</a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
             <div class="item carousel-item">
               <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-3" *ngFor="let product of products">
                   <div class="thumb-wrapper">
                     <div class="img-box">
-                      <img src="https://image.ibb.co/g0CAPp/ipad.jpg" class="img-responsive img-fluid" alt="">
+                      <img src="{{ product.img }}" class="img-responsive img-fluid" alt="">
                     </div>
                     <div class="thumb-content">
-                      <h4>Apple iPhone</h4>
-                      <p class="item-price"><s>$369.00</s> <span>$349.00</span></p>
+                      <h4>{{ product.name }}</h4>
+                      <p class="item-price"><s>{{ product.priceBeforeSale }}</s>
+                        <span>{{ product.priceAfterSale }}</span></p>
                       <div class="star-rating">
                         <ul class="list-inline">
                           <li class="list-inline-item"><i class="fa fa-star"></i></li>
@@ -222,83 +97,22 @@
                           <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
                         </ul>
                       </div>
-                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                      <a href="http://localhost:4200/wish" class="btn btn-primary fa fa-heart"> Add to Wish List</a>
+                      <a href="http://localhost:4200/cart" class="btn btn-primary fa fa-cart-plus"> Add to Cart</a>
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-3">
-                  <div class="thumb-wrapper">
-                    <div class="img-box">
-                      <img src="https://image.ibb.co/g0CAPp/ipad.jpg" class="img-responsive img-fluid" alt="">
-                    </div>
-                    <div class="thumb-content">
-                      <h4>Canon DSLR</h4>
-                      <p class="item-price"><s>$315.00</s> <span>$250.00</span></p>
-                      <div class="star-rating">
-                        <ul class="list-inline">
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                        </ul>
-                      </div>
-                      <a href="#" class="btn btn-primary">Add to Cart</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="thumb-wrapper">
-                    <div class="img-box">
-                      <img src="https://image.ibb.co/g0CAPp/ipad.jpg" class="img-responsive img-fluid" alt="">
-                    </div>
-                    <div class="thumb-content">
-                      <h4>Google Pixel</h4>
-                      <p class="item-price"><s>$450.00</s> <span>$418.00</span></p>
-                      <div class="star-rating">
-                        <ul class="list-inline">
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                        </ul>
-                      </div>
-                      <a href="#" class="btn btn-primary">Add to Cart</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="thumb-wrapper">
-                    <div class="img-box">
-                      <img src="https://image.ibb.co/g0CAPp/ipad.jpg" class="img-responsive img-fluid" alt="">
-                    </div>
-                    <div class="thumb-content">
-                      <h4>Apple Watch</h4>
-                      <p class="item-price"><s>$350.00</s> <span>$330.00</span></p>
-                      <div class="star-rating">
-                        <ul class="list-inline">
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                          <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-                        </ul>
-                      </div>
-                      <a href="#" class="btn btn-primary">Add to Cart</a>
-                    </div>
-                  </div>
-                </div> -->
               </div>
             </div>
+            <!-- Carousel controls -->
+            <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+              <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+              <i class="fa fa-angle-right"></i>
+            </a>
           </div>
-          <!-- Carousel controls -->
-          <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
-            <i class="fa fa-angle-left"></i>
-          </a>
-          <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
-            <i class="fa fa-angle-right"></i>
-          </a>
+
         </div>
       </div>
     </div>
