@@ -23,7 +23,7 @@
           <div class="carousel-inner">
             <div class="item carousel-item active">
               <div class="row">
-                <div class="col-sm-3" *ngFor="let product of products">
+                <div class="col-sm-3" *ngFor="let product of products | slice:0:4">
                   <div class="thumb-wrapper">
                     <div class="img-box">
                       <img src="{{ product.img }}" class="img-responsive img-fluid" alt="">
@@ -51,7 +51,7 @@
 
             <div class="item carousel-item">
               <div class="row">
-                <div class="col-sm-3" *ngFor="let product of products">
+                <div class="col-sm-3" *ngFor="let product of products | slice:4:8">
                   <div class="thumb-wrapper">
                     <div class="img-box">
                       <img src="{{ product.img }}" class="img-responsive img-fluid" alt="">
@@ -79,7 +79,7 @@
 
             <div class="item carousel-item">
               <div class="row">
-                <div class="col-sm-3" *ngFor="let product of products">
+                <div class="col-sm-3" *ngFor="let product of products  | slice:8:9">
                   <div class="thumb-wrapper">
                     <div class="img-box">
                       <img src="{{ product.img }}" class="img-responsive img-fluid" alt="">
