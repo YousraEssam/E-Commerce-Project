@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="http://localhost:4200/">E-Commerce</a>
+  <a class="navbar-brand" href="#" routerLink='/'>E-Commerce</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -8,14 +8,8 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="http://localhost:4200/">Home Page<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#" routerLink='/'>Home Page<span class="sr-only">(current)</span></a>
       </li>
-      <!-- <li class="nav-item">
-        <a class="nav-link" href="http://localhost:4200/login">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="http://localhost:4200/register">Register</a>
-      </li> -->
     </ul>
 
     <!-- SEARCH BAR -->
@@ -38,20 +32,24 @@
         <!-- WISH LIST -->
         <div class="row">
           <div class="col">
-            <div ngbDropdown class="d-inline-block dropdown" autoClose="outside">
+            <div ngbDropdown class="d-inline-block" autoClose="outside">
               <a href="#" class="ml-3 icontext" data-toggle="dropdown" data-offset="20,10" aria-expanded="false">
                 <div class="widget-header">
                   <a href="http://localhost:4200/wish" class="icontext">
                     <div class="icon-wrap icon-xs bg2 round text-secondary"><i class="fa fa-heart"></i></div>
-                    <div class="text-wrap" id="dropdownForm1" ngbDropdownToggle>
+                    <div class="text-wrap" id="dropdownBasic1" ngbDropdownToggle>
                       <div class="text-wrap">
                         <span>Wish List, 3 items</span>
                       </div>
                     </div>
                   </a>
                 </div> <!-- widget .// -->
-                <div ngbDropdownMenu aria-labelledby="dropdownForm1" class="btns">
-                  <p> items will be here </p>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="btns">
+                  <p ngbDropdownItem> items 1 </p>
+                  <p ngbDropdownItem> items 2 </p>
+                  <p ngbDropdownItem> items 3 </p>
+                  <button type="submit" class="btn btn-primary" (click)="navigateTo('wish')">
+                    go to Wish Lists Page</button>
                 </div>
               </a>
             </div>
@@ -73,8 +71,12 @@
                     </div>
                   </a>
                 </div> <!-- widget .// -->
-                <div ngbDropdownMenu aria-labelledby="dropdownForm1" class="btns">
-                  <p> items will be here </p>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="btns">
+                  <p ngbDropdownItem> items 1 </p>
+                  <p ngbDropdownItem> items 2 </p>
+                  <p ngbDropdownItem> items 3 </p>
+                  <button type="submit" class="btn btn-primary" (click)="navigateTo('cart')">
+                    go to Cart Page</button>
                 </div>
               </a>
             </div>
