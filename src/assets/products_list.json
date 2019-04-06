@@ -6,6 +6,7 @@
             "priceBeforeSale": "$400.00",
             "priceAfterSale": "$369.00",
             "category": "iPads",
+            "quantity": "4",
             "rating": "4",
             "desc": "The iPad is a tablet computer developed by Apple. ... The iPad does not include a keyboard or a trackpad, but instead has a touchscreen interface, which is used to control the device. Like the iPhone, the iPad runs Apple's iOS operating system."
         },
@@ -15,6 +16,7 @@
             "priceBeforeSale": "$25.00",
             "priceAfterSale": "$23.99",
             "category": "Headphones",
+            "quantity": "4",
             "rating": "4",
             "desc": "The world of music is waiting for you to dive in with the Sony WH-CH500 Wireless Headphones. These headphones come with powerful Bluetooth and NFC one-touch connectivity options which help you to connect to your mobile in a blink of an eye. The headphones have a powerful battery that ensures the uninterrupted flow of music for up to 20 hours. If you have a question, you can ask the answer directly from the headphones with their Google and Siri Voice Assistant functionality. The Sony WH-CH500 headphones are incredibly light in weight. The swivel design of the headphones fixes all your storage problems associated with traveling with them."
         },
@@ -24,6 +26,7 @@
             "priceBeforeSale": "$899.00",
             "priceAfterSale": "$649.99",
             "category": "Macbook",
+            "quantity": "4",
             "rating": "4",
             "desc": "1.6GHz dual-core 8th-generation Intel Core i5 processor with Turbo Boost up to 3.6GHz, Retina display, 8GB 2133MHz LPDDR3 memory, 128GB SSD storage1, Intel UHD Graphics 617, Touch ID, Force Touch trackpad, Two Thunderbolt 3 ports"
         },
@@ -33,6 +36,7 @@
             "priceBeforeSale": "$315.00",
             "priceAfterSale": "$250.00",
             "category": "Cameras",
+            "quantity": "4",
             "rating": "4",
             "desc": "Although few models were introduced, Nikon made movie cameras as well. The R10 and R8 SUPER ZOOM Super 8 models (introduced in 1973) were the top of the line and last attempt for the amateur movie field. The cameras had a special gate and claw system to improve image steadiness and overcome a major drawback of Super 8 cartridge design. The R10 model has a high speed 10X macro zoom lens."
         },
@@ -42,6 +46,7 @@
             "priceBeforeSale": "$289.00",
             "priceAfterSale": "$269.00",
             "category": "Play Station",
+            "quantity": "4",
             "rating": "4",
             "desc": "The PlayStation 4 (PS4) is an eighth-generation home video game console developed by Sony Interactive Entertainment. Announced as the successor to the PlayStation 3 in February, 2013, it was launched on November 15 in North America, November 29 in Europe, South America and Australia, and on February 22, 2014, in Japan. It competes with Microsoft's Xbox One and Nintendo's Wii U and Switch."
         },
@@ -51,6 +56,7 @@
             "priceBeforeSale": "$289.00",
             "priceAfterSale": "$269.00",
             "category": "Play Station",
+            "quantity": "4",
             "rating": "4",
             "desc": "The PlayStation 4 (PS4) is an eighth-generation home video game console developed by Sony Interactive Entertainment. Announced as the successor to the PlayStation 3 in February, 2013, it was launched on November 15 in North America, November 29 in Europe, South America and Australia, and on February 22, 2014, in Japan. It competes with Microsoft's Xbox One and Nintendo's Wii U and Switch."
         },
@@ -60,6 +66,7 @@
             "priceBeforeSale": "$315.00",
             "priceAfterSale": "$250.00",
             "category": "Cameras",
+            "quantity": "4",
             "rating": "4",
             "desc": "Although few models were introduced, Nikon made movie cameras as well. The R10 and R8 SUPER ZOOM Super 8 models (introduced in 1973) were the top of the line and last attempt for the amateur movie field. The cameras had a special gate and claw system to improve image steadiness and overcome a major drawback of Super 8 cartridge design. The R10 model has a high speed 10X macro zoom lens."
         },
@@ -69,6 +76,7 @@
             "priceBeforeSale": "$25.00",
             "priceAfterSale": "$23.99",
             "category": "Headphones",
+            "quantity": "4",
             "rating": "4",
             "desc": "The world of music is waiting for you to dive in with the Sony WH-CH500 Wireless Headphones. These headphones come with powerful Bluetooth and NFC one-touch connectivity options which help you to connect to your mobile in a blink of an eye. The headphones have a powerful battery that ensures the uninterrupted flow of music for up to 20 hours. If you have a question, you can ask the answer directly from the headphones with their Google and Siri Voice Assistant functionality. The Sony WH-CH500 headphones are incredibly light in weight. The swivel design of the headphones fixes all your storage problems associated with traveling with them."
         },
@@ -78,6 +86,7 @@
             "priceBeforeSale": "$400.00",
             "priceAfterSale": "$369.00",
             "category": "iPads",
+            "quantity": "4",
             "rating": "4",
             "desc": "The iPad is a tablet computer developed by Apple. ... The iPad does not include a keyboard or a trackpad, but instead has a touchscreen interface, which is used to control the device. Like the iPhone, the iPad runs Apple's iOS operating system."
         }
