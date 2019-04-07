@@ -21,9 +21,9 @@ export class LoginComponent implements OnInit {
   });
   
   constructor(private router: Router) { }
-  
-  public navigateTo(path: string): void {
-    this.router.navigate([path]);
+
+  alert(): void {
+    alert("Logged in Successfully");
   }
 
   ngOnInit() {
