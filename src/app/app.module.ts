@@ -16,6 +16,8 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LogoutComponent } from './components/logout/logout.component';
+import { InputComponent } from './components/shared/input/input.component';
+import { SubmitComponent } from './components/shared/submit/submit.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { LogoutComponent } from './components/logout/logout.component';
     NotFoundComponent,
     NavbarComponent,
     FooterComponent,
-    LogoutComponent
+    LogoutComponent,
+    InputComponent,
+    SubmitComponent
   ],
   imports: [
     BrowserModule,
