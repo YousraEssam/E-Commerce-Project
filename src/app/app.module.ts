@@ -33,7 +33,7 @@ import { SubmitComponent } from './components/shared/submit/submit.component';
     FooterComponent,
     LogoutComponent,
     InputComponent,
-    SubmitComponent
+    SubmitComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +44,8 @@ import { SubmitComponent } from './components/shared/submit/submit.component';
     HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ],
 })
 export class AppModule { }

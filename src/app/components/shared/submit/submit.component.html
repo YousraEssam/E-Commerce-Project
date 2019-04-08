@@ -1,3 +1,6 @@
-<p>
-  submit works!
-</p>
+<div [formGroup]="loginForm">
+
+  <button class="btn btn-primary" type="button" [disabled]="loginForm.invalid" (click)="alert()"
+    routerLink='/'>Submit</button>
+    
+</div>
