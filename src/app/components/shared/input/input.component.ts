@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-input',
@@ -8,9 +9,10 @@ import { FormGroup } from '@angular/forms';
 })
 export class InputComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   @Input() loginForm: FormGroup;
+  @Input() registerForm: FormGroup;
 
   ngOnInit() {
   }

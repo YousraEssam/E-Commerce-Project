@@ -1,43 +1,8 @@
 <p class="form"> Register Form </p>
+
 <div class="register">
-<form [formGroup]="registerForm">
+  
+  <app-input [registerForm]="registerForm"></app-input>
+  <app-submit [registerForm]="registerForm"> Submit</app-submit>
 
-  <label class="name">
-    Name:
-    <br>
-    <label class="sub-label">
-        Name is required
-    </label>
-    <br>
-    <input id="name" name="name" type="text" formControlName="name" 
-      class="form-control" required  minlength="4">
-  </label>
-<br>
-  <label class="email">
-    Email:
-    <br>
-    <label class="sub-label">
-        Email is required
-    </label>
-    <br>
-    <input id="email" name="email" type="email" formControlName="email" 
-      class="form-control" required>
-  </label>
-<br>
-  <label class="password">
-    Password:
-    <br>
-    <label class="sub-label">
-        Password must be between 8 and 16 characters
-    </label>
-    <br>
-    <input id="password" name="password" type="password" formControlName="password" 
-      class="form-control" required minlength="8" maxlength="16">
-  </label>
-<br>
-  <p>
-    <button class="btn btn-primary" type="button" [disabled]="registerForm.invalid" (click)="alert()" routerLink='/login'>Submit</button>
-  </p>
-
-</form>
 </div>

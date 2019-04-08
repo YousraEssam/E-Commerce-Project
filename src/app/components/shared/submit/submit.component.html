@@ -1,6 +1,18 @@
-<div [formGroup]="loginForm">
+<ng-container *ngIf="router.url === '/login'">
+  <div [formGroup]="loginForm">
 
-  <button class="btn btn-primary" type="button" [disabled]="loginForm.invalid" (click)="alert()"
-    routerLink='/'>Submit</button>
-    
-</div>
+    <button class="btn btn-primary" type="button" [disabled]="loginForm.invalid" (click)="alertLogin()"
+      routerLink='/'>Submit</button>
+
+  </div>
+</ng-container>
+
+<ng-container *ngIf="router.url === '/register'">
+
+  <div [formGroup]="registerForm">
+
+    <button class="btn btn-primary" type="button" [disabled]="registerForm.invalid" (click)="alertRegister()"
+      routerLink='/login'>Submit</button>
+
+  </div>
+</ng-container>
