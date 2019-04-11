@@ -50,7 +50,7 @@
                   <a href="http://localhost:4200/cart" class="icontext">
                     <div class="icon-wrap icon-xs bg2 round text-secondary"><i class="fa fa-cart-plus"></i></div>
                     <div class="text-wrap" id="dropdownForm1" ngbDropdownToggle>
-                      <div class="text-wrap">
+                      <div class="text-wrap" >
                         <span>Cart, 3 items</span>
                       </div>
                     </div>
@@ -80,17 +80,17 @@
 
               <!-- check logged in or not  -->
               <div *ngIf="logged == Null">
-              <div ngbDropdownMenu aria-labelledby="dropdownForm1" class="btns">
-                <p>Member?</p>
-                <button type="submit" class="btn btn-primary" routerLink='/login'>Login</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownForm1" class="btns">
+                  <p>Member?</p>
+                  <button type="submit" class="btn btn-primary" routerLink='/login'>Login</button>
 
-                <p>New around here?</p>
-                <button type="submit" class="btn btn-primary" (click)="navigateTo('register')">Register</button>
-              </div>
+                  <p>New around here?</p>
+                  <button type="submit" class="btn btn-primary" (click)="navigateTo('register')">Register</button>
+                </div>
               </div>
 
-              <div *ngIf="logged != Null"> 
-              <div ngbDropdownMenu aria-labelledby="dropdownForm1" class="btns">
+              <div *ngIf="logged != Null">
+                <div ngbDropdownMenu aria-labelledby="dropdownForm1" class="btns">
                   <button type="submit" class="btn btn-primary" (click)="afterLogOut()">
                     Log Out</button>
                 </div>

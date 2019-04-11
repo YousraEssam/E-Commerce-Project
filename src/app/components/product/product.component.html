@@ -14,16 +14,16 @@
           <div class="item carousel-item active">
             <div class="row">
               <div class="col-sm-3" *ngFor="let product of products | slice:0:4">
-                <div class="thumb-wrapper" (click)="navigateToSinglePage('single/:id')">
-                  <div class="img-box">
+                <div class="thumb-wrapper">
+                  <div class="img-box"  (click)="navigateToSinglePage('single/:id')">
                     <img src="{{ product.img }}" id="{{product.id}}" class="img-responsive img-fluid" alt="">
                   </div>
                   <div class="thumb-content">
                     <h4>{{ product.name }}</h4>
                     <p class="item-price"><s>$ {{ product.priceBeforeSale }}</s>
                       <span>$ {{ product.priceAfterSale }}</span></p>
-                    <a href="#" (click)="navigateTo('wish')" class="btn btn-primary fa fa-heart"> Add to Wish List</a>
-                    <a href="#" (click)="navigateTo('cart')" class="btn btn-primary fa fa-cart-plus"> Add to Cart</a>
+                    <a (click)="navigateTo('wish')" class="btn btn-primary fa fa-heart"> Add to Wish List</a>
+                    <a id={{product.id}} (click)="addToCart()" class="btn btn-primary fa fa-cart-plus"> Add to Cart</a>
                   </div>
                 </div>
               </div>
@@ -33,8 +33,8 @@
           <div class="item carousel-item">
             <div class="row">
               <div class="col-sm-3" *ngFor="let product of products | slice:4:8">
-                <div class="thumb-wrapper" (click)="navigateTo('single')">
-                  <div class="img-box">
+                <div class="thumb-wrapper">
+                  <div class="img-box" (click)="navigateToSinglePage('single/:id')">
                     <img src="{{ product.img }}" class="img-responsive img-fluid" alt="">
                   </div>
                   <div class="thumb-content">
@@ -42,8 +42,8 @@
                     <p class="item-price"><s>$ {{ product.priceBeforeSale }}</s>
                       <span>$ {{ product.priceAfterSale }}</span></p>
 
-                    <a href="#" (click)="navigateTo('wish')" class="btn btn-primary fa fa-heart"> Add to Wish List</a>
-                    <a href="#" (click)="navigateTo('cart')" class="btn btn-primary fa fa-cart-plus"> Add to Cart</a>
+                    <a (click)="navigateTo('wish')" class="btn btn-primary fa fa-heart"> Add to Wish List</a>
+                    <a id={{product.id}} (click)="addToCart()" class="btn btn-primary fa fa-cart-plus"> Add to Cart</a>
                   </div>
                 </div>
               </div>
@@ -53,8 +53,8 @@
           <div class="item carousel-item">
             <div class="row">
               <div class="col-sm-3" *ngFor="let product of products  | slice:8:9">
-                <div class="thumb-wrapper" (click)="navigateTo('single')">
-                  <div class="img-box">
+                <div class="thumb-wrapper">
+                  <div class="img-box" (click)="navigateToSinglePage('single/:id')">
                     <img src="{{ product.img }}" class="img-responsive img-fluid" alt="">
                   </div>
                   <div class="thumb-content">
@@ -62,8 +62,8 @@
                     <p class="item-price"><s>$ {{ product.priceBeforeSale }}</s>
                       <span>$ {{ product.priceAfterSale }}</span></p>
 
-                    <a href="#" (click)="navigateTo('wish')" class="btn btn-primary fa fa-heart"> Add to Wish List</a>
-                    <a href="#" (click)="navigateTo('cart')" class="btn btn-primary fa fa-cart-plus"> Add to Cart</a>
+                    <a (click)="navigateTo('wish')" class="btn btn-primary fa fa-heart"> Add to Wish List</a>
+                    <a id={{product.id}} (click)="addToCart()" class="btn btn-primary fa fa-cart-plus"> Add to Cart</a>
                   </div>
                 </div>
               </div>
