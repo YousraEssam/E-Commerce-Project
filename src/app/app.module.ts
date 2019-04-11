@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LogoutComponent } from './components/logout/logout.component';
 import { InputComponent } from './components/shared/input/input.component';
 import { SubmitComponent } from './components/shared/submit/submit.component';
+import { ProductComponent } from './components/product/product.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { SubmitComponent } from './components/shared/submit/submit.component';
     LogoutComponent,
     InputComponent,
     SubmitComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
