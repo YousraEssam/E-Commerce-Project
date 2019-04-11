@@ -19,7 +19,6 @@ import { LogoutComponent } from './components/logout/logout.component';
 import { InputComponent } from './components/shared/input/input.component';
 import { SubmitComponent } from './components/shared/submit/submit.component';
 import { ProductComponent } from './components/product/product.component';
-import { ProductsService } from './services/products.service';
 
 @NgModule({
   declarations: [
@@ -46,7 +45,7 @@ import { ProductsService } from './services/products.service';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [ProductsService],
+  providers: [],
   bootstrap: [
     AppComponent
   ],

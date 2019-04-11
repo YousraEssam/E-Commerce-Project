@@ -1,45 +1,41 @@
 <div class="container">
   <br><br>
-  <div class="card">
-    <div class="row">
+  
+  <div class="card" *ngFor="let product of products">
+    <!-- {{id}} -->
+    <div class="row" *ngIf="product.id==id">
       <aside class="col-sm-5 border-right">
         <article class="gallery-wrap">
           <div class="img-big-wrap">
-            <div> <a href="https://image.ibb.co/g0CAPp/ipad.jpg">
-                <img class="img" src="https://image.ibb.co/g0CAPp/ipad.jpg"></a></div>
+            <div> <a href="{{product.img}}">
+                <img class="img" src="{{product.img}}"></a></div>
           </div>
         </article>
       </aside>
       <aside class="col-sm-7">
         <article class="card-body p-5">
-          <h3 class="title mb-3">product name</h3>
+          <h3 class="title mb-3">{{product.name}}</h3>
 
           <p class="price-detail-wrap">
             <b>Price before sale: </b>
             <span class="price h3 text-danger">
-              <span class="num"><s>1599</s> </span>
+              <span class="num"><s>$ {{product.priceBeforeSale}}</s> </span>
             </span>
             <b class="pr">Price after sale: </b>
             <span class="price h3 text-success">
-              <span class="num">1299</span>
+              <span class="num">$ {{product.priceAfterSale}}</span>
             </span>
           </p>
 
           <dl class="item-property">
             <dt>Description</dt>
             <dd>
-              <p>Here goes description consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco </p>
+              <p> {{product.desc}} </p>
             </dd>
           </dl>
           <dl class="param param-feature">
             <dt>Category</dt>
-            <dd>12345611</dd>
-          </dl> <!-- item-property-hor .// -->
-          <dl class="param param-feature">
-            <dt>Rating</dt>
-            <dd>Black and white</dd>
+            <dd>{{product.category}}</dd>
           </dl> <!-- item-property-hor .// -->
           <hr>
           <div class="row">
@@ -59,8 +55,8 @@
             </div> <!-- col.// -->
           </div> <!-- row.// -->
           <hr>
-          <a href="http://localhost:4200/wish" class="btn btn-primary fa fa-heart"> Add to Wish List</a>
-          <a href="http://localhost:4200/cart" class="btn btn-primary fa fa-cart-plus"> Add to Cart</a>
+          <a href="#" (click)="navigateTo('wish')" class="btn btn-primary fa fa-heart"> Add to Wish List</a>
+          <a href="#" (click)="navigateTo('cart')" class="btn btn-primary fa fa-cart-plus"> Add to Cart</a>
         </article> <!-- card-body.// -->
       </aside> <!-- col.// -->
     </div> <!-- row.// -->

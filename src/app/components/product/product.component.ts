@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
@@ -16,12 +16,15 @@ export class ProductComponent implements OnInit {
   public navigateTo(path: string): void {
     this.router.navigate([path]);
   }
-
+  public navigateToSinglePage(path:string):void{
+    this.router.navigate(['single',event.target['id']]);
+  }
   ngOnInit() {
     this.http.get('../../../assets/products_list.json')
         .subscribe(data => {
         this.products = data["productsList"];
       });
+      
   }
   
 }
