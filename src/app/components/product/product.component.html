@@ -1,3 +1,122 @@
-<p>
-  product works!
-</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Our <b>Products</b></h2>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+          <!-- Carousel indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+          <!-- Wrapper for carousel items -->
+          <div class="carousel-inner">
+            <div class="item carousel-item active">
+              <div class="row">
+                <div class="col-sm-3" *ngFor="let product of products | slice:0:4">
+                  <div class="thumb-wrapper" (click)="navigateTo('single')">
+                    <div class="img-box">
+                      <img src="{{ product.img }}" class="img-responsive img-fluid" alt="">
+                    </div>
+                    <div class="thumb-content">
+                      <h4>{{ product.name }}</h4>
+                      <p class="item-price"><s>{{ product.priceBeforeSale }}</s>
+                        <span>{{ product.priceAfterSale }}</span></p>
+                      <div class="star-rating">
+                        <ul class="list-inline">
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                        </ul>
+                      </div>
+                      <a href="#" (click)="navigateTo('wish')" class="btn btn-primary fa fa-heart"> Add to Wish List</a>
+                      <a href="#" (click)="navigateTo('cart')" class="btn btn-primary fa fa-cart-plus"> Add to Cart</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item carousel-item">
+              <div class="row">
+                <div class="col-sm-3" *ngFor="let product of products | slice:4:8">
+                  <div class="thumb-wrapper" (click)="navigateTo('single')">
+                    <div class="img-box">
+                      <img src="{{ product.img }}" class="img-responsive img-fluid" alt="">
+                    </div>
+                    <div class="thumb-content">
+                      <h4>{{ product.name }}</h4>
+                      <p class="item-price"><s>{{ product.priceBeforeSale }}</s>
+                        <span>{{ product.priceAfterSale }}</span></p>
+                      <div class="star-rating">
+                        <ul class="list-inline">
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                        </ul>
+                      </div>
+                      <a href="#" (click)="navigateTo('wish')" class="btn btn-primary fa fa-heart"> Add to Wish List</a>
+                      <a href="#" (click)="navigateTo('cart')" class="btn btn-primary fa fa-cart-plus"> Add to Cart</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item carousel-item">
+              <div class="row">
+                <div class="col-sm-3" *ngFor="let product of products  | slice:8:9">
+                  <div class="thumb-wrapper" (click)="navigateTo('single')">
+                    <div class="img-box">
+                      <img src="{{ product.img }}" class="img-responsive img-fluid" alt="">
+                    </div>
+                    <div class="thumb-content">
+                      <h4>{{ product.name }}</h4>
+                      <p class="item-price"><s>{{ product.priceBeforeSale }}</s>
+                        <span>{{ product.priceAfterSale }}</span></p>
+                      <div class="star-rating">
+                        <ul class="list-inline">
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                        </ul>
+                      </div>
+                      <a href="#" (click)="navigateTo('wish')" class="btn btn-primary fa fa-heart"> Add to Wish List</a>
+                      <a href="#" (click)="navigateTo('cart')" class="btn btn-primary fa fa-cart-plus"> Add to Cart</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Carousel controls -->
+            <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+              <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+              <i class="fa fa-angle-right"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
