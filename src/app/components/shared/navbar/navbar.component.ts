@@ -10,10 +10,20 @@ export class NavbarComponent implements OnInit {
 
   constructor(private router: Router) { }
   
+  logged: any;
+
   public navigateTo(path: string): void {
     this.router.navigate([path]);
+    
   }
+
+  public afterLogOut(path: string): void{
+    localStorage.removeItem("LoggedUsers");
+    window.location.replace('/');
+  }
+
   ngOnInit() {
+    this.logged = JSON.parse(localStorage.getItem('LoggedUsers'));
   }
 
 }

@@ -12,21 +12,6 @@
       </li>
     </ul>
 
-    <!-- SEARCH BAR -->
-    <div class="col-lg-6 col-sm-6">
-      <form action="#" class="search-wrap">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search">
-          <div class="input-group-append">
-            <button class="btn btn-primary" type="submit">
-              <i class="fa fa-search"></i>
-            </button>
-          </div>
-        </div>
-      </form> <!-- search-wrap .end// -->
-    </div>
-    <!-- END SEARCH BAR  -->
-
     <div class="col-lg-3 col-sm-6 navbar-collapse collapse w-100 order-3 dual-collapse2">
       <div class="widgets-wrap d-flex justify-content-end">
         <!-- WISH LIST -->
@@ -89,27 +74,27 @@
               <a href="#" class="ml-3 icontext" data-toggle="dropdown" data-offset="20,10" aria-expanded="false">
                 <div class="icon-wrap icon-xs bg2 round text-secondary"><i class="fa fa-user"></i></div>
                 <div class="text-wrap" id="dropdownForm1" ngbDropdownToggle>
-                  <span>Hello, User <i class="fa fa-caret-down"></i></span>
+                  <span>Hello {{logged}} <i class="fa fa-caret-down"></i></span>
                 </div>
               </a>
 
               <!-- check logged in or not  -->
-              <!-- <div *ngIf=""> -->
+              <div *ngIf="logged == Null">
               <div ngbDropdownMenu aria-labelledby="dropdownForm1" class="btns">
                 <p>Member?</p>
-                <button type="submit" class="btn btn-primary" (click)="navigateTo('login')">Login</button>
+                <button type="submit" class="btn btn-primary" routerLink='/login'>Login</button>
 
                 <p>New around here?</p>
                 <button type="submit" class="btn btn-primary" (click)="navigateTo('register')">Register</button>
               </div>
-              <!-- </div> -->
+              </div>
 
-              <!-- <div *ngIf=""> -->
-              <!-- <div ngbDropdownMenu aria-labelledby="dropdownForm1" class="btns">
-                  <button type="submit" class="btn btn-primary" (click)="navigateTo('/')">
+              <div *ngIf="logged != Null"> 
+              <div ngbDropdownMenu aria-labelledby="dropdownForm1" class="btns">
+                  <button type="submit" class="btn btn-primary" (click)="afterLogOut()">
                     Log Out</button>
-                </div> -->
-              <!-- </div> -->
+                </div>
+              </div>
 
             </div>
           </div>

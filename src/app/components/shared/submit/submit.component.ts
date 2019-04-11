@@ -11,12 +11,14 @@ export class SubmitComponent implements OnInit {
 
   constructor(private router: Router) { }
 
+  logged: any;
   @Input() loginForm: FormGroup;
   @Input() registerForm: FormGroup;
 
   alertLogin(){
     let Users: any;
     let isMember: boolean= false;
+
     if (localStorage.getItem("Users")) {
       Users = JSON.parse(localStorage.getItem('Users'));
     } else {
@@ -29,6 +31,7 @@ export class SubmitComponent implements OnInit {
         if(Users[i].password == this.loginForm.value.password)
         {
           alert('Logged in Successfully');
+          this.logged = localStorage.setItem("LoggedUsers", JSON.stringify(this.loginForm.value.email));
         }else{
           alert('Wrong Email or Password');
         }

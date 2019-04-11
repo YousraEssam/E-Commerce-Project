@@ -15,7 +15,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { LogoutComponent } from './components/logout/logout.component';
 import { InputComponent } from './components/shared/input/input.component';
 import { SubmitComponent } from './components/shared/submit/submit.component';
 import { ProductComponent } from './components/product/product.component';
@@ -32,7 +31,6 @@ import { ProductComponent } from './components/product/product.component';
     NotFoundComponent,
     NavbarComponent,
     FooterComponent,
-    LogoutComponent,
     InputComponent,
     SubmitComponent,
     ProductComponent,
