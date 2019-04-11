@@ -92,14 +92,25 @@
                   <span>Hello, User <i class="fa fa-caret-down"></i></span>
                 </div>
               </a>
+
+              <!-- check logged in or not  -->
+              <!-- <div *ngIf=""> -->
               <div ngbDropdownMenu aria-labelledby="dropdownForm1" class="btns">
                 <p>Member?</p>
                 <button type="submit" class="btn btn-primary" (click)="navigateTo('login')">Login</button>
 
                 <p>New around here?</p>
-                <button type="submit" class="btn btn-primary" (click)="navigateTo('register')">
-                  Register</button>
+                <button type="submit" class="btn btn-primary" (click)="navigateTo('register')">Register</button>
               </div>
+              <!-- </div> -->
+
+              <!-- <div *ngIf=""> -->
+              <!-- <div ngbDropdownMenu aria-labelledby="dropdownForm1" class="btns">
+                  <button type="submit" class="btn btn-primary" (click)="navigateTo('/')">
+                    Log Out</button>
+                </div> -->
+              <!-- </div> -->
+
             </div>
           </div>
         </div>

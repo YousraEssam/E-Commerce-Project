@@ -23,5 +23,5 @@ export class HomeComponent implements OnInit {
         this.products = data["productsList"];
       });
   }
-
+  
 }
