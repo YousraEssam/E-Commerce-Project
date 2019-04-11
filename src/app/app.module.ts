@@ -14,11 +14,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { LogoutComponent } from './components/logout/logout.component';
 import { InputComponent } from './components/shared/input/input.component';
 import { SubmitComponent } from './components/shared/submit/submit.component';
 import { ProductComponent } from './components/product/product.component';
+import { ProductsService } from './services/products.service';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,7 @@ import { ProductComponent } from './components/product/product.component';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [ProductsService],
   bootstrap: [
     AppComponent
   ],
