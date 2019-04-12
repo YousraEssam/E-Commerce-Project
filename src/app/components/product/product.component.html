@@ -22,7 +22,7 @@
                     <h4>{{ product.name }}</h4>
                     <p class="item-price"><s>$ {{ product.priceBeforeSale }}</s>
                       <span>$ {{ product.priceAfterSale }}</span></p>
-                    <a (click)="navigateTo('wish')" class="btn btn-primary fa fa-heart"> Add to Wish List</a>
+                    <a id={{product.id}} (click)="addtoWishList()" class="btn btn-primary fa fa-heart"> Add to Wish List</a>
                     <a id={{product.id}} (click)="addToCart()" class="btn btn-primary fa fa-cart-plus"> Add to Cart</a>
                   </div>
                 </div>
@@ -42,7 +42,7 @@
                     <p class="item-price"><s>$ {{ product.priceBeforeSale }}</s>
                       <span>$ {{ product.priceAfterSale }}</span></p>
 
-                    <a (click)="navigateTo('wish')" class="btn btn-primary fa fa-heart"> Add to Wish List</a>
+                    <a id={{product.id}} (click)="addtoWishList()" class="btn btn-primary fa fa-heart"> Add to Wish List</a>
                     <a id={{product.id}} (click)="addToCart()" class="btn btn-primary fa fa-cart-plus"> Add to Cart</a>
                   </div>
                 </div>
@@ -62,7 +62,7 @@
                     <p class="item-price"><s>$ {{ product.priceBeforeSale }}</s>
                       <span>$ {{ product.priceAfterSale }}</span></p>
 
-                    <a (click)="navigateTo('wish')" class="btn btn-primary fa fa-heart"> Add to Wish List</a>
+                    <a id={{product.id}} (click)="addtoWishList()" class="btn btn-primary fa fa-heart"> Add to Wish List</a>
                     <a id={{product.id}} (click)="addToCart()" class="btn btn-primary fa fa-cart-plus"> Add to Cart</a>
                   </div>
                 </div>

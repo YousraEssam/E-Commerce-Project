@@ -12,13 +12,9 @@ export class ProductComponent implements OnInit {
   products: object[];
   public count:number=0;  
   cartContent = JSON.parse(localStorage.getItem("cart")) ? JSON.parse(localStorage.getItem("cart")) : [];
-  // cart = this.cartContent;
+  wishListContent = JSON.parse(localStorage.getItem("wishList")) ? JSON.parse(localStorage.getItem("wishList")) : [];
 
   constructor(private router: Router, private http: HttpClient) { }
-
-  public navigateTo(path: string): void {
-    this.router.navigate([path]);
-  }
 
   public navigateToSinglePage(path:string):void{
     this.router.navigate(['single',event.target['id']]);
@@ -34,12 +30,11 @@ export class ProductComponent implements OnInit {
   public addToCart(){
     var id = event.target['id'];
     var exist=false;
-    console.log(id);
     var counter = {};
 
     if(this.cartContent.length>0){
 
-      for ( var i=0; i<this.cartContent.length; i++){
+      for (var i=0; i<this.cartContent.length; i++){
         
         if(this.cartContent[i]['id'] == id){
           this.cartContent[i].count++ ;
@@ -78,5 +73,48 @@ export class ProductComponent implements OnInit {
 
   getCount(){
     this.count++;
-  }  
+  } 
+  
+  public addtoWishList(){
+    var id = event.target['id'];
+    var exist=false;
+    var wish = {};
+
+    if(this.wishListContent.length>0){
+
+      for (var i=0; i<this.wishListContent.length; i++){
+  
+        if(this.wishListContent[i]['id'] == id){
+          alert("Item already exists in your Wish List")
+          localStorage.setItem("wishList", JSON.stringify(this.wishListContent)) ;
+          exist=true;
+        }
+      }
+      if(!exist){
+        wish = {
+          id: id,
+          name: this.products[id-1]['name'],
+          img: this.products[id-1]['img'],
+          price: this.products[id-1]['priceAfterSale'],
+          category: this.products[id-1]['category'],
+          count: 1
+        };
+        this.wishListContent.push(wish);
+        localStorage.setItem("wishList", JSON.stringify(this.wishListContent));
+      }
+
+    }else if(this.wishListContent.length==0){ 
+      wish = {
+        id: id,
+        name: this.products[id-1]['name'],
+        img: this.products[id-1]['img'],
+        price: this.products[id-1]['priceAfterSale'],
+        category: this.products[id-1]['category'],
+        count: 1
+      }
+      this.wishListContent.push(wish);
+      localStorage.setItem("wishList", JSON.stringify(this.wishListContent));
+    }
+
+  }
 }
