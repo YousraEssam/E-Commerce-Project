@@ -23,8 +23,6 @@ export class SingleProductComponent implements OnInit {
     .subscribe(data => {
    this.products = data["productsList"];
     this.id = parseInt(this.route.snapshot.paramMap.get('id'))
-    console.log(this.id);
-
   });
   }
 

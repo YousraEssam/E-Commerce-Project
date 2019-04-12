@@ -2,7 +2,6 @@
   <br><br>
   
   <div class="card" *ngFor="let product of products">
-    <!-- {{id}} -->
     <div class="row" *ngIf="product.id==id">
       <aside class="col-sm-5 border-right">
         <article class="gallery-wrap">
@@ -38,7 +37,7 @@
             <dd>{{product.category}}</dd>
           </dl> <!-- item-property-hor .// -->
           <hr>
-          <div class="row">
+          <!-- <div class="row">
             <div class="col-sm-5">
               <dl class="param param-inline">
                 <dt>Quantity: </dt>
@@ -51,9 +50,9 @@
 
                   </select>
                 </dd>
-              </dl> <!-- item-property .// -->
-            </div> <!-- col.// -->
-          </div> <!-- row.// -->
+              </dl>
+            </div>
+          </div> -->
           <hr>
           <a href="#" (click)="navigateTo('wish')" class="btn btn-primary fa fa-heart"> Add to Wish List</a>
           <a href="#" (click)="navigateTo('cart')" class="btn btn-primary fa fa-cart-plus"> Add to Cart</a>
