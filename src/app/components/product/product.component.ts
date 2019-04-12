@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { BehaviorSubject } from 'rxjs';
+import { ObsService } from 'src/app/service/obs.service';
 
 @Component({
   selector: 'app-product',
@@ -10,11 +12,15 @@ import { HttpClient } from '@angular/common/http';
 export class ProductComponent implements OnInit {
 
   products: object[];
-  public count:number=0;  
+  count: number=0; 
+
+  cartCounter: BehaviorSubject<any> = new BehaviorSubject('');
+  wishListCounter: BehaviorSubject<any> = new BehaviorSubject('');
+
   cartContent = JSON.parse(localStorage.getItem("cart")) ? JSON.parse(localStorage.getItem("cart")) : [];
   wishListContent = JSON.parse(localStorage.getItem("wishList")) ? JSON.parse(localStorage.getItem("wishList")) : [];
 
-  constructor(private router: Router, private http: HttpClient) { }
+  constructor(private router: Router, private http: HttpClient,  private obs : ObsService) { }
 
   public navigateToSinglePage(path:string):void{
     this.router.navigate(['single',event.target['id']]);
@@ -27,7 +33,7 @@ export class ProductComponent implements OnInit {
       });
   }
   
-  public addToCart(){
+  addToCart(){
     var id = event.target['id'];
     var exist=false;
     var counter = {};
@@ -69,13 +75,19 @@ export class ProductComponent implements OnInit {
       localStorage.setItem('cart', JSON.stringify(this.cartContent));
     }
     this.getCount();
+
   }
 
   getCount(){
     this.count++;
+    this.obs.cartCounter.next(this.count);
   } 
-  
-  public addtoWishList(){
+
+  getCartCounter(){
+    return this.cartCounter.asObservable();
+  }
+
+  addtoWishList(){
     var id = event.target['id'];
     var exist=false;
     var wish = {};
@@ -115,6 +127,16 @@ export class ProductComponent implements OnInit {
       this.wishListContent.push(wish);
       localStorage.setItem("wishList", JSON.stringify(this.wishListContent));
     }
-
+    // this.getWishListCount();
   }
+
+  // getWishListCount(){
+  //   // this.count = this.wishListContent.length;
+  //   this.obs.wishListCounter.next(this.wishListContent.length);
+  // } 
+
+  // getWishListCounter(){
+  //   return this.wishListCounter.asObservable();
+  // }
+
 }

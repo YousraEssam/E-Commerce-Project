@@ -18,6 +18,7 @@ export class CartCounterComponent implements OnInit {
   itemsCount: number = 0;
   totalPrice: number = 0;
   total: number = 0;
+  itemToBeDeleted: any;
   
   ngOnInit() {
     this.logged = JSON.parse(localStorage.getItem('LoggedUsers'));
@@ -35,15 +36,15 @@ export class CartCounterComponent implements OnInit {
   calculateItemsCount(){
     this.itemsCount = 0;
     if(this.cartContent.length){
-    for ( var i=0; i<this.cartContent.length; i++){
-      this.itemsCount  += this.cartContent[i].count;
+      for ( var i=0; i<this.cartContent.length; i++){
+        this.itemsCount  += this.cartContent[i].count;
+      }
+    }else{
+      this.itemsCount = 0;
     }
-  }else{
-    this.itemsCount = 0;
+    
+    return this.itemsCount;
   }
-  
-  return this.itemsCount;
-}
 
   calculateTotalPrice(){
     this.totalPrice = 0;
@@ -61,6 +62,15 @@ export class CartCounterComponent implements OnInit {
   calculateOverallTotal(){
     this.total = this.totalPrice + 60.00;
     return this.total;
+  }
+
+  deleteItem(){
+    var id = event.target['id'];
+    var itemToBeDeleted = this.cartContent.map(itemToBeDeleted => itemToBeDeleted.id);
+    let index = itemToBeDeleted.findIndex(id => id == id);
+    console.log(index);
+    this.cartContent = this.cartContent.splice(index,1);
+    this.cartContent.push(this.cartContent);
   }
 
 }

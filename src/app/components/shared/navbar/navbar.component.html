@@ -25,11 +25,12 @@
                       <div class="icon-wrap icon-xs bg2 round text-secondary"><i class="fa fa-cart-plus"></i></div>
                       <div class="text-wrap" id="dropdownForm1" ngbDropdownToggle>
                         <div class="text-wrap">
-                          <span>Wish List, {{wishListItemsCount}} Items</span>
+                          Wish List
+                          <span class="badge"> {{wishListItemsCount}}</span>
                         </div>
                       </div>
                     </a>
-                  </div> <!-- widget .// -->
+                  </div>
   
                   <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="btns">
                     <table ngbDropdownItem class="table">
@@ -70,11 +71,12 @@
                     <div class="icon-wrap icon-xs bg2 round text-secondary"><i class="fa fa-cart-plus"></i></div>
                     <div class="text-wrap" id="dropdownForm1" ngbDropdownToggle>
                       <div class="text-wrap">
-                        <span>Cart, {{itemsCount}} Items</span>
+                          Cart
+                        <span class="badge">{{cartCounter}}</span>
                       </div>
                     </div>
                   </a>
-                </div> <!-- widget .// -->
+                </div> 
 
                 <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="btns">
                   <table ngbDropdownItem class="table">

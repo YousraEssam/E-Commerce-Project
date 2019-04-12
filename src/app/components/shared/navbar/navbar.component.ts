@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { ObsService } from 'src/app/service/obs.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +10,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private router: Router , private http: HttpClient, private route :ActivatedRoute) { }
+  wishListCounter: any;
+  cartCounter: any;
+
+  constructor(private router: Router , private http: HttpClient, private route :ActivatedRoute, private obs : ObsService) {
+
+   }
   
   logged: any;
   cart: any;
@@ -41,6 +47,8 @@ export class NavbarComponent implements OnInit {
     this.id = parseInt(this.route.snapshot.paramMap.get('id'));
     this.calculateCartItemsCount();
     this.calculateWishListItemsCount();
+
+    this.obs.getCartObs().subscribe(data => this.cartCounter = data);
   }
 
   calculateCartItemsCount(){
