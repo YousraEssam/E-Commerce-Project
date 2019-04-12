@@ -46,21 +46,39 @@
           <div class="col">
             <div ngbDropdown class="d-inline-block dropdown" autoClose="outside">
               <a href="#" class="ml-3 icontext" data-toggle="dropdown" data-offset="20,10" aria-expanded="false">
+
                 <div class="widget-header">
                   <a href="http://localhost:4200/cart" class="icontext">
                     <div class="icon-wrap icon-xs bg2 round text-secondary"><i class="fa fa-cart-plus"></i></div>
                     <div class="text-wrap" id="dropdownForm1" ngbDropdownToggle>
-                      <div class="text-wrap" >
-                        <span>Cart, 3 items</span>
+                      <div class="text-wrap">
+                        <span>Cart, {{itemsCount}} Items</span>
                       </div>
                     </div>
                   </a>
                 </div> <!-- widget .// -->
+
                 <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="btns">
-                  <p ngbDropdownItem> items 1 </p>
-                  <p ngbDropdownItem> items 2 </p>
-                  <p ngbDropdownItem> items 3 </p>
-                  <button type="submit" class="btn btn-primary" (click)="navigateTo('cart')">
+                  <table ngbDropdownItem class="table">
+                    <th class="cart-row"> Product Name</th>
+                    <th class="cart-row"> Quantity </th>
+                    <th class="cart-row"> Remove item </th>
+                    <tr *ngFor="let product of cartContent">
+                      <td>
+                        <label class="cart-label btn "> {{product.name}} </label>
+                      </td>
+
+                      <td>
+                        <label class="cart-label btn "> {{product.count}} </label>
+                      </td>
+
+                      <td>
+                        <button class="cart-cancel btn btn btn-danger"> X </button>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <button type="submit" class="btn btn-primary btns" (click)="navigateTo('cart')">
                     go to Cart Page</button>
                 </div>
               </a>
