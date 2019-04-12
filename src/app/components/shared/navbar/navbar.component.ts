@@ -13,11 +13,13 @@ export class NavbarComponent implements OnInit {
   
   logged: any;
   cart: any;
+  wish: any;
   products: object[];
   id: number;
   cartContent = JSON.parse(localStorage.getItem("cart")) ? JSON.parse(localStorage.getItem("cart")) : [] ;
+  wishListContent = JSON.parse(localStorage.getItem("wishList")) ? JSON.parse(localStorage.getItem("wishList")) : [] ;
   itemsCount: number = 0;
-
+  wishListItemsCount: number = 0;
 
   public navigateTo(path: string): void {
     this.router.navigate([path]);
@@ -31,25 +33,31 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     this.logged = JSON.parse(localStorage.getItem('LoggedUsers'));
     this.cart = JSON.parse(localStorage.getItem('cart'));
+    this.wish = JSON.parse(localStorage.getItem("wishList"));
     this.http.get('../../../assets/products_list.json')
     .subscribe(data => {
     this.products = data["productsList"];
   });
     this.id = parseInt(this.route.snapshot.paramMap.get('id'));
-    this.calculateItemsCount();
+    this.calculateCartItemsCount();
+    this.calculateWishListItemsCount();
   }
 
-  calculateItemsCount(){
+  calculateCartItemsCount(){
     this.itemsCount = 0;
     if(this.cartContent.length){
-    for ( var i=0; i<this.cartContent.length; i++){
-      this.itemsCount  += this.cartContent[i].count;
+      for ( var i=0; i<this.cartContent.length; i++){
+        this.itemsCount  += this.cartContent[i].count;
+      }
+    }else{
+      this.itemsCount = 0;
     }
-  }else{
-    this.itemsCount = 0;
+    
+    return this.itemsCount;
   }
-  
-  return this.itemsCount;
-}
 
+  calculateWishListItemsCount(){
+    this.wishListItemsCount = this.wishListContent.length;
+    return this.wishListItemsCount;
+  }
 }

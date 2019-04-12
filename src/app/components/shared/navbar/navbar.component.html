@@ -16,30 +16,48 @@
       <div class="widgets-wrap d-flex justify-content-end">
         <!-- WISH LIST -->
         <div class="row">
-          <div class="col">
-            <div ngbDropdown class="d-inline-block" autoClose="outside">
-              <a href="#" class="ml-3 icontext" data-toggle="dropdown" data-offset="20,10" aria-expanded="false">
-                <div class="widget-header">
-                  <a href="http://localhost:4200/wish" class="icontext">
-                    <div class="icon-wrap icon-xs bg2 round text-secondary"><i class="fa fa-heart"></i></div>
-                    <div class="text-wrap" id="dropdownBasic1" ngbDropdownToggle>
-                      <div class="text-wrap">
-                        <span>Wish List, 3 items</span>
+            <div class="col">
+              <div ngbDropdown class="d-inline-block dropdown" autoClose="outside">
+                <a href="#" class="ml-3 icontext" data-toggle="dropdown" data-offset="20,10" aria-expanded="false">
+  
+                  <div class="widget-header">
+                    <a href="http://localhost:4200/wish" class="icontext">
+                      <div class="icon-wrap icon-xs bg2 round text-secondary"><i class="fa fa-cart-plus"></i></div>
+                      <div class="text-wrap" id="dropdownForm1" ngbDropdownToggle>
+                        <div class="text-wrap">
+                          <span>Wish List, {{wishListItemsCount}} Items</span>
+                        </div>
                       </div>
-                    </div>
-                  </a>
-                </div> <!-- widget .// -->
-                <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="btns">
-                  <p ngbDropdownItem> items 1 </p>
-                  <p ngbDropdownItem> items 2 </p>
-                  <p ngbDropdownItem> items 3 </p>
-                  <button type="submit" class="btn btn-primary" (click)="navigateTo('wish')">
-                    go to Wish Lists Page</button>
-                </div>
-              </a>
+                    </a>
+                  </div> <!-- widget .// -->
+  
+                  <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="btns">
+                    <table ngbDropdownItem class="table">
+                      <th class="cart-row"> Product Name</th>
+                      <th class="cart-row"> Price </th>
+                      <th class="cart-row"> Remove item </th>
+                      <tr *ngFor="let product of wishListContent">
+                        <td>
+                          <label class="cart-label btn "> {{product.name}} </label>
+                        </td>
+  
+                        <td>
+                          <label class="cart-label btn "> {{product.price}} $</label>
+                        </td>
+  
+                        <td>
+                          <button class="cart-cancel btn btn btn-danger"> X </button>
+                        </td>
+                      </tr>
+                    </table>
+  
+                    <button type="submit" class="btn btn-primary btns" routerLink='/wish'>
+                      go to Cart Page</button>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
 
         <!-- CART -->
         <div class="row">
@@ -78,7 +96,7 @@
                     </tr>
                   </table>
 
-                  <button type="submit" class="btn btn-primary btns" (click)="navigateTo('cart')">
+                  <button type="submit" class="btn btn-primary btns" routerLink='/cart'>
                     go to Cart Page</button>
                 </div>
               </a>
@@ -103,7 +121,7 @@
                   <button type="submit" class="btn btn-primary" routerLink='/login'>Login</button>
 
                   <p>New around here?</p>
-                  <button type="submit" class="btn btn-primary" (click)="navigateTo('register')">Register</button>
+                  <button type="submit" class="btn btn-primary" routerLink='/register'>Register</button>
                 </div>
               </div>
 
