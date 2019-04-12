@@ -35,31 +35,13 @@
           <dl class="param param-feature">
             <dt>Category</dt>
             <dd>{{product.category}}</dd>
-          </dl> <!-- item-property-hor .// -->
+          </dl>
           <hr>
-          <!-- <div class="row">
-            <div class="col-sm-5">
-              <dl class="param param-inline">
-                <dt>Quantity: </dt>
-                <dd>
-                  <select class="form-control form-control-sm" style="width:70px;">
-                    <option> 1 </option>
-                    <option> 2 </option>
-                    <option> 3 </option>
-                    <option> 4 </option>
-
-                  </select>
-                </dd>
-              </dl>
-            </div>
-          </div> -->
-          <hr>
-          <a href="#" (click)="navigateTo('wish')" class="btn btn-primary fa fa-heart"> Add to Wish List</a>
-          <a href="#" (click)="navigateTo('cart')" class="btn btn-primary fa fa-cart-plus"> Add to Cart</a>
-        </article> <!-- card-body.// -->
-      </aside> <!-- col.// -->
-    </div> <!-- row.// -->
-  </div> <!-- card.// -->
+          <a id={{product.id}} (click)="addtoWishList()" class="btn btn-primary fa fa-heart"> Add to Wish List</a>
+          <a id={{product.id}} (click)="addToCart()" class="btn btn-primary fa fa-cart-plus"> Add to Cart</a>
+        </article>
+      </aside>
+    </div>
+  </div>
 </div>
 <br><br><br>
-<!--container.//-->
