@@ -10,11 +10,11 @@ import { HttpClient } from '@angular/common/http';
 export class ProductComponent implements OnInit {
 
   products: object[];
-  // id: number = event.target['id'];
-  public count:number=0;
-  constructor(private router: Router, private http: HttpClient) { }
+  public count:number=0;  
   cartContent = JSON.parse(localStorage.getItem("cart")) ? JSON.parse(localStorage.getItem("cart")) : [];
-  cart = this.cartContent;
+  // cart = this.cartContent;
+
+  constructor(private router: Router, private http: HttpClient) { }
 
   public navigateTo(path: string): void {
     this.router.navigate([path]);
@@ -36,48 +36,47 @@ export class ProductComponent implements OnInit {
     var exist=false;
     console.log(id);
     var counter = {};
-    console.log("fun");
 
-    if(this.cart.length>0)
-    { console.log("if");
-      for ( var i=0; i<this.cart.length; i++)
-      {
-        if(this.cart[i]['id'] == id)
-        {
-          this.cart[i].count++ ;
-          localStorage.setItem('cart', JSON.stringify(this.cart)) ;
+    if(this.cartContent.length>0){
+
+      for ( var i=0; i<this.cartContent.length; i++){
+        
+        if(this.cartContent[i]['id'] == id){
+          this.cartContent[i].count++ ;
+          localStorage.setItem('cart', JSON.stringify(this.cartContent)) ;
           exist=true;
-          console.log(this.cart)
         }
       }
-      if(!exist)
-      {
-        counter = 
-        {
+
+      if(!exist){
+        counter = {
           id: id,
+          name: this.products[id-1]['name'],
+          img: this.products[id-1]['img'],
+          price: this.products[id-1]['priceAfterSale'],
+          category: this.products[id-1]['category'],
           count: 1
         };
         this.cartContent.push(counter);
         localStorage.setItem('cart', JSON.stringify(this.cartContent));
-    
-
       }
 
-    }else if(this.cart.length==0)
-    { console.log("else");
-      counter = 
-      {
+    }else if(this.cartContent.length==0){ 
+      counter = {
         id: id,
+        name: this.products[id-1]['name'],
+        img: this.products[id-1]['img'],
+        price: this.products[id-1]['priceAfterSale'],
+        category: this.products[id-1]['category'],
         count: 1
       }
-     this.cartContent.push(counter)
-     localStorage.setItem('cart', JSON.stringify(this.cartContent))
+      this.cartContent.push(counter);
+      localStorage.setItem('cart', JSON.stringify(this.cartContent));
     }
-   this.getCount();
+    this.getCount();
   }
+
   getCount(){
     this.count++;
   }  
-   
-
 }
